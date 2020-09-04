@@ -1,24 +1,50 @@
-name:                api-liquid
-version:             0.1.0.0
--- synopsis:
--- description:
-homepage:            https://github.com/sigrlami/api-liquid#readme
-license:             BSD3
-license-file:        LICENSE
-author:              Sergey Bushnyak
-maintainer:          sergey.bushnyak@sigrlami.eu
-copyright:           2020, Sergey Bushnyak
-category:            Web
-build-type:          Simple
-extra-source-files:  README.md
-cabal-version:       >=1.10
+cabal-version: 1.12
 
-library
-  hs-source-dirs:      src
-  exposed-modules:     Lib
-  build-depends:       base >= 4.7 && < 5
-  default-language:    Haskell2010
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: d81350d11c01feb8fb04d80ad89d69b9c3a66d4b115eb84e49ec530d594e7313
+
+name:           api-liquid
+version:        0.1.0.0
+description:    Api client for Liquid Crypto Exchange
+category:       Web
+homepage:       https://github.com/sigrlami/api-liquid#readme
+bug-reports:    https://github.com/sigrlami/api-liquid/issues
+author:         Sergey Bushnyak
+maintainer:     sergey.bushnyak@sigrlami.eu
+copyright:      2020,
+                Sergey Bushnyak
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
 
 source-repository head
-  type:     git
+  type: git
   location: https://github.com/sigrlami/api-liquid
+
+library
+  exposed-modules:
+      Liquid.Api
+      Liquid.Types
+      Liquid.Utils
+  other-modules:
+      Lib
+      Paths_api_liquid
+  hs-source-dirs:
+      src
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , http-client
+    , http-client-tls
+    , http-conduit
+    , servant
+    , servant-client
+    , text
+    , time
+  default-language: Haskell2010

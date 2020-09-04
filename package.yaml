@@ -1,18 +1,32 @@
 name: api-liquid
 version: '0.1.0.0'
 category: Web
+description: Api client for Liquid Crypto Exchange
 author: Sergey Bushnyak
 maintainer: sergey.bushnyak@sigrlami.eu
 copyright:
 - '2020'
 - Sergey Bushnyak
-license: BSD3
+license: MIT
 github: sigrlami/api-liquid
 extra-source-files:
 - README.md
 dependencies:
+- bytestring
 - base >=4.7 && <5
 library:
   source-dirs: src
   exposed-modules:
-  - Lib
+  - Liquid.Api
+  - Liquid.Types
+  - Liquid.Utils
+  dependencies:
+  - base >=4.7 && <5
+  - aeson
+  - text
+  - time
+  - http-conduit
+  - servant
+  - servant-client
+  - http-client
+  - http-client-tls
