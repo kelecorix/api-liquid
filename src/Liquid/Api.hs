@@ -96,8 +96,10 @@ getProducts' = do
   where
     host = (BaseUrl Https endpoint 443 "")
 
--- | Ger particular product
--- |
+-- | Get particular product information
+--   For some reason only odd ids are working, 1, 3, 5..
+--   TODO: investigate ^
+--
 getProductById' :: Int                        -- ^ unique product id
                 -> IO (Either ClientError LT.Product)
 getProductById' id = do

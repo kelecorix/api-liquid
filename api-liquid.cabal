@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: d81350d11c01feb8fb04d80ad89d69b9c3a66d4b115eb84e49ec530d594e7313
+-- hash: 139cb3570e99bd18bc2b91d4182979f34bd60be6012ea12165122cb59145aea3
 
 name:           api-liquid
 version:        0.1.0.0
@@ -47,4 +47,6 @@ library
     , servant-client
     , text
     , time
+    , unordered-containers
+    , vector
   default-language: Haskell2010

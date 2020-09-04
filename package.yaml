@@ -30,3 +30,5 @@ library:
   - servant-client
   - http-client
   - http-client-tls
+  - unordered-containers
+  - vector
